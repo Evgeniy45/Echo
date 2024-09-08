@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(41, 40, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.reg {
+    width: 480px;
+    height: 640px;
+    padding: 30px 20px;
+    
+    border-radius: 48px;
+    background-image: url(back.png);
+    background-size: 530px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.head {
+  
+    text-align: center;
+}
+
+.head h2 {
+    color: #ffffff;
+    margin-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 48px;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Вирівнює інпути по горизонталі */
+}
+
+.main input {
+    width: 70%;
+    height: 50px;
+    margin: 7px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 32px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    font-weight: 600;
+    color: white; /* Білий колір тексту */
+    text-align: left; /* Текст вирівняний зліва */
+}
+
+.main input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Білий колір плейсхолдера з прозорістю */
+}
+.main input:focus {
+    border-color: #ffffff;
+    outline: none;
+    background-color: #ffffff;
+    color: #004164;
+    font-weight: 400;
+    box-shadow: inset 0px 4px 10px rgba(0, 179, 250, 0.2); /* Внутрішня тінь */
+}
+
+.signup {
+    margin-top: 30px;
+    width: 50%;
+    height: 55px;
+    background-color: #ffffff;
+    color: #41BDFF;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+
+.signup:hover {
+    background-color: #e5f1f8;
+}
+
+.hide {
+    display: none;
+}
+
+h4{
+    color: #ffffff;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+span{
+    font-weight: bold; /* Жирний текст */
+    text-decoration: underline;
+}
+
+.error{
+    text-align: left !important;
+    font-weight: 600;
+}

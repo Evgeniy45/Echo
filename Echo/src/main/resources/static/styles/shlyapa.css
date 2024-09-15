@@ -3,6 +3,7 @@
 
 
 }
+
 /* 
 body {
     font-family: Arial, sans-serif;
@@ -12,12 +13,17 @@ body {
 } */
 
 .main-header {
-    background-color: rgba(203, 241, 248, 0.5); /* Напівпрозорий колір фону */
-    backdrop-filter: blur(10px); /* Ефект розмиття */
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(203, 241, 248, 0.5);
+    /* Напівпрозорий колір фону */
+    backdrop-filter: blur(10px);
+    /* Ефект розмиття */
     color: white;
     padding: 20px 0;
-    position: relative;
-    z-index: 10;
+    position: fixed;
+    z-index: 15;
 }
 
 .container {
@@ -49,7 +55,8 @@ body {
 .search-input {
     background-color: #55BFF9;
     height: 35px;
-    padding: 5px 5px 5px 40px; /* Простір для іконки зліва */
+    padding: 5px 5px 5px 40px;
+    /* Простір для іконки зліва */
     border-radius: 15px;
     border: none;
     font-size: 16px;
@@ -58,14 +65,18 @@ body {
 .search-wrapper::before {
     content: '';
     background: url('../images/Vector.png') no-repeat center;
-    background-size: 20px 20px; /* Розмір іконки */
+    background-size: 20px 20px;
+    /* Розмір іконки */
     position: absolute;
-    left: 10px; /* Розташування іконки */
+    left: 10px;
+    /* Розташування іконки */
     top: 50%;
     transform: translateY(-50%);
-    width: 20px; /* Ширина іконки */
-    height: 20px; /* Висота іконки */
-    
+    width: 20px;
+    /* Ширина іконки */
+    height: 20px;
+    /* Висота іконки */
+
 }
 
 .search-input::placeholder {
@@ -73,16 +84,13 @@ body {
 }
 
 .search-input:focus {
-    outline: none; /* Прибирає обводку при фокусуванні */
+    outline: none;
+    /* Прибирає обводку при фокусуванні */
 }
 
-
-
-
-  
-  .search-input::placeholder {
+.search-input::placeholder {
     color: #004E89;
-  }
+}
 
 .header-actions {
     display: flex;
@@ -98,23 +106,23 @@ body {
     margin-left: 10px;
     width: 50px;
     height: 50px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease;
 }
 
 .profile-btn {
-    background-image: url('profile-photo.jpg'); 
+    background-image: url('profile-photo.jpg');
 }
 
 .message-btn {
-    background-image: url('message-icon.jpg'); 
+    background-image: url('message-icon.jpg');
 }
 
 .profile-btn:focus,
 .message-btn:focus {
-    outline: none; 
+    outline: none;
 }
 
 
@@ -143,11 +151,10 @@ body {
     font-weight: bold;
 }
 
-.message-btn{
+.message-btn {
     padding-right: 150px;
 }
 
-.profile-btn{
+.profile-btn {
     padding-right: 150px;
 }
-

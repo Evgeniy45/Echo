@@ -1,0 +1,117 @@
+:root {
+    --color-primary-dark: #000000;
+    --color-primary-light: #EBE8E8;
+    --color-brand: #41BDFF;
+    --color-secondary-light: #ffffff;
+    --color-secondary-dark: #004E89;
+    --color-decoration: #D9D9D9;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.home-page-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 82px;
+    margin: 100px 150px;
+    padding: 0 40px;
+}
+
+.user-info-container {
+    position: fixed;
+    left: 220px;
+    margin-top: 12px;
+    padding: 26px 30px;
+    width: 430px;
+    height: 720px;
+    background-color: var(--color-secondary-light);
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.user-nick {
+    text-align: center;
+}
+
+.user-nick h2 {
+    margin-top: 14px;
+}
+
+.user-info {
+    margin: 34px 0 140px;
+}
+
+.user-info p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.user-info p a {
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    transition: color 0.3s;
+}
+
+.user-info p a:hover {
+    color: var(--color-brand);
+}
+
+.user-info .description {
+    font-weight: 100;
+}
+
+
+.edit-button {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 134px;
+    background-color: var(--color-brand);
+    color: var(--color-secondary-light);
+    font-size: 26px;
+    border: 1px solid var(--color-brand);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.edit-button:hover {
+    color: var(--color-secondary-dark);
+    background-color: transparent;
+    border: 2px solid var(--color-secondary-dark);
+}
+
+.edit-icon {
+    stroke: currentColor;
+    fill: none;
+    vertical-align: middle;
+}
+
+.posts-and-button {
+    margin-top: 28px;
+}
+
+.add-post-button {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 158px;
+    background-color: var(--color-brand);
+    color: var(--color-secondary-light);
+    font-weight: 400;
+    font-size: 26px;
+    border: 2px solid var(--color-brand);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.add-post-button:hover {
+    color: var(--color-secondary-dark);
+    background-color: transparent;
+    border: 2px solid var(--color-secondary-dark);
+}

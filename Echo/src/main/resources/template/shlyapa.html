@@ -8,20 +8,66 @@
 </head>
 <body>
     <header class="main-header">
+
+        <div class="overlay hide"> <!-- Full-screen overlay -->
+        <div id="register" class="reg-reg hide">
+            <div class="head ">
+                <h2>Sign up</h2>
+            </div>
+            <div class="main">
+                <input id="username" type="text" placeholder="enter username...">
+                <input id="email" type="email" placeholder="enter your email...">
+                <input id="phone" type="phone" placeholder="enter your phone...">
+                <input id="password" type="password" placeholder="enter password...">
+                <input id="confirm" type="password" placeholder="confirm password...">
+                <p class="error hide" style="color: red; text-align: left;">passwords don't match</p>
+    
+                <button class="signup">Sign up</button>
+                
+                <h4 >Do you have an account?  <span id="log-in">Log in</span></h4>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+        <div id="register" class="reg hide">
+            <div class="head ">
+                <h2>Log in</h2>
+            </div>
+            <div class="main">
+                <input id="username" type="text" placeholder="enter username...">
+    
+                <input id="password" type="password" placeholder="enter password...">
+    
+    
+                <button class="signup">Sign up</button>
+                
+                <h4 >Don't have an account?  <span id="sign-up">Sign up</span></h4>
+            </div>
+        </div>
+    
+    </div>
         <div class="container">
             <div class="logo-search">
                 <a href="../template/main-pages.html"><img src="../static/images/logo.png" width="90px" alt="Logo"></a>
-                
+
                 <div class="search-wrapper">
                     <input type="text" placeholder="Search..." class="search-input">
                 </div>
-                
+
             </div>
             <div class="header-actions">
-                <button class="message-btn"><img src="../static/images/Message icon.png" alt="Message Button" width="66px" height="55px"></button>
-                <button class="profile-btn"><img src="../static/images/Profile icon.png" alt="Profile Button" width="46px" height="55px"></button>
-                
-                <button class="login-btn">Log In</button>
+                <button class="message-btn"><img src="../static/images/Message icon.png" alt="Message Button"
+                        width="66px" height="55px"></button>
+                <button class="profile-btn"><img src="../static/images/Profile icon.png" alt="Profile Button"
+                        width="46px" height="55px"></button>
+
+                <button class="header-btn " hidden>Log Out</button> 
+                <button class="login-btn header-btn" >Log In</button>
+
             </div>
         </div>
     </header>

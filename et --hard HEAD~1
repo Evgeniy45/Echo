@@ -1,0 +1,47 @@
+[33mcommit 0c0518acca4f96a9a5397a7abcbb179974906ffb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfront-main-pages[m[33m)[m
+Author: antnssss <enotik096@gmail.com>
+Date:   Thu Sep 12 23:28:29 2024 +0300
+
+    added shlyapa
+
+[33mcommit d1b9be16a588997765d6957d7091fbebf94133cd[m[33m ([m[1;31morigin/front-main-pages[m[33m)[m
+Author: Yevhenii Olkhovskii <jekaolhovskii@gmail.com>
+Date:   Thu Sep 12 17:08:03 2024 +0300
+
+    Add main page with posts
+
+[33mcommit 5ef0b577c835ded28c9e2b793182b4be2fb314ae[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mfront_auth[m[33m)[m
+Author: antnssss <enotik096@gmail.com>
+Date:   Sun Sep 8 21:29:37 2024 +0300
+
+    created login form
+
+[33mcommit baa547606ed8ce19d785f606605e94c4356011ae[m
+Author: antnssss <enotik096@gmail.com>
+Date:   Sun Sep 8 20:50:48 2024 +0300
+
+    created register form
+
+[33mcommit 5f8f6081d49a85ace99861e5d5c57df816b4c1dd[m
+Author: BohdanYarovyi <bogdan.yarovoy.01@gmail.com>
+Date:   Fri Sep 6 17:09:48 2024 +0300
+
+    Removed useless files
+
+[33mcommit 36f95dd8bdd6ba97ecb2f245246135c843655f27[m
+Author: BohdanYarovyi <bogdan.yarovoy.01@gmail.com>
+Date:   Fri Sep 6 17:07:44 2024 +0300
+
+    Added basic derictories
+
+[33mcommit 8d0dec04780d2349be1b371f14b473513db6e1ae[m
+Author: BohdanYarovyi <bogdan.yarovoy.01@gmail.com>
+Date:   Fri Sep 6 16:33:32 2024 +0300
+
+    Created a structure of project
+
+[33mcommit 14e5884c5560d2e1285ddc4b19530f4fee43c2b7[m
+Author: Bohdan Yarovyi <111184879+BohdanYarovoy@users.noreply.github.com>
+Date:   Fri Sep 6 16:15:32 2024 +0300
+
+    Initial commit

@@ -12,6 +12,17 @@ body {
     background-attachment: fixed;
 } */
 
+
+.overlay{
+    position: absolute;
+    background-color: rgb(29, 28, 28, 0.9);
+    height: 1200%;
+    width: 1200%;
+    top: 0;
+    z-index: 500;
+
+}
+
 .main-header {
     width: 100%;
     top: 0;
@@ -23,7 +34,7 @@ body {
     color: white;
     padding: 20px 0;
     position: fixed;
-    z-index: 15;
+    z-index: 6;
 }
 
 .container {
@@ -127,7 +138,7 @@ body {
 
 
 
-.login-btn {
+.header-btn {
     background-color: #55BFF9;
     color: #004E89;
     border: none;

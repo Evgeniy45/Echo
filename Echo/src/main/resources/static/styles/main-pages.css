@@ -30,7 +30,7 @@ body {
 }
 
 .post:first-child {
-    margin-top: 20px;
+    margin-top: 120px;
 }
 
 /* Post Header */
@@ -123,8 +123,10 @@ body {
     background: none;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .action-button img {
     margin-right: 6px;
 }
+

@@ -16,6 +16,10 @@
 
 
 
+.close-btn:hover {
+    color: #ff0000; 
+}
+
 .head {
   
     text-align: center;
@@ -63,8 +67,17 @@
     box-shadow: inset 0px 4px 10px rgba(0, 179, 250, 0.2); /* Внутрішня тінь */
 }
 
+
+.emptyReg{
+    color: red;
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left ;
+    width: 70%; 
+}
+
 .signup {
-    margin-top: 100px;
+    margin-top: 90px;
     width: 50%;
     height: 55px;
     background-color: #ffffff;
@@ -102,5 +115,5 @@ span{
 
 .error{
     text-align: left !important;
-    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

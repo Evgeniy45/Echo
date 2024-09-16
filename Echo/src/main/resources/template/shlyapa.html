@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../static/styles/shlyapa.css"> 
 </head>
 <body>
-    <header class="main-header">
+    
+    <header class="main-header ">
 
         <div class="overlay hide"> <!-- Full-screen overlay -->
         <div id="register" class="reg-reg hide">
@@ -15,14 +16,15 @@
                 <h2>Sign up</h2>
             </div>
             <div class="main">
-                <input id="username" type="text" placeholder="enter username...">
+                <input id="usernameReg" type="text" placeholder="enter username...">
                 <input id="email" type="email" placeholder="enter your email...">
                 <input id="phone" type="phone" placeholder="enter your phone...">
                 <input id="password" type="password" placeholder="enter password...">
                 <input id="confirm" type="password" placeholder="confirm password...">
-                <p class="error hide" style="color: red; text-align: left;">passwords don't match</p>
+                <h4 class="emptyReg hide">the field is empty</h4>
+                <p class="error hide" style="color: red; text-align: left; width: 70%;">passwords don't match</p>
     
-                <button class="signup">Sign up</button>
+                <button  id="signup" class="signup">Sign up</button>
                 
                 <h4 >Do you have an account?  <span id="log-in">Log in</span></h4>
             </div>
@@ -38,14 +40,14 @@
                 <h2>Log in</h2>
             </div>
             <div class="main">
-                <input id="username" type="text" placeholder="enter username...">
+                <input id="username" class="inputUsername" type="text" placeholder="enter username...">
     
-                <input id="password" type="password" placeholder="enter password...">
+                <input id="passwordLogin" class="inputPasswordLogin" type="password" placeholder="enter password...">
     
-    
-                <button class="signup">Sign up</button>
+                <h4 class="emptyLogin hide">the field is empty</h4>
+                <button id="login" class="signup">Log In</button>
                 
-                <h4 >Don't have an account?  <span id="sign-up">Sign up</span></h4>
+                <h4>Don't have an account?  <span id="sign-up">Sign up</span></h4>
             </div>
         </div>
     
@@ -65,9 +67,8 @@
                 <button class="profile-btn"><img src="../static/images/Profile icon.png" alt="Profile Button"
                         width="46px" height="55px"></button>
 
-                <button class="header-btn " hidden>Log Out</button> 
-                <button class="login-btn header-btn" >Log In</button>
-
+                        <button class="header-btn " hidden>Log Out</button> 
+                        <button class="login-btn header-btn" >Log In</button>
             </div>
         </div>
     </header>

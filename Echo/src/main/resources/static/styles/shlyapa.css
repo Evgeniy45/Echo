@@ -16,10 +16,11 @@ body {
 .overlay{
     position: absolute;
     background-color: rgb(29, 28, 28, 0.9);
-    height: 1200%;
+    height: 100vw;
     width: 1200%;
     top: 0;
     z-index: 500;
+    overflow: hidden;
 
 }
 

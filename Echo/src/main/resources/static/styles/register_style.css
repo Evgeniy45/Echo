@@ -1,5 +1,5 @@
-
 .reg-reg {
+
     width: 480px;
     height: 720px;
     padding: 30px 20px;
@@ -7,21 +7,25 @@
     background-image: url(../images/back.png);
     background-size: 630px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Закріплює форму на екрані */
-    margin-top: 420px;
-    left: 50%; /* Вирівнює форму по горизонталі */
-    transform: translate(-50%, -50%); /* Центрує форму */
-    z-index: 505; /* Встановлює великий z-index для перекриття інших елементів */
+    position: fixed;
+    /* Закріплює форму на екрані */
+    margin-top: 480px;
+    left: 50%;
+    /* Вирівнює форму по горизонталі */
+    transform: translate(-50%, -50%);
+    /* Центрує форму */
+    z-index: 505;
+    /* Встановлює великий z-index для перекриття інших елементів */
 }
 
 
 
 .close-btn:hover {
-    color: #ff0000; 
+    color: #ff0000;
 }
 
 .head {
-  
+
     text-align: center;
 }
 
@@ -35,45 +39,56 @@
 }
 
 .main-reg {
-    margin-top: 20px;
+
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Вирівнює інпути по горизонталі */
+    align-items: center;
+    /* Вирівнює інпути по горизонталі */
 }
 
 .main input {
+
     width: 70%;
     height: 50px;
     margin: 7px;
-    padding: 5px;
+    padding: 5px 15px;
     border: 1px solid #ffffff;
     border-radius: 32px;
     background-color: rgba(255, 255, 255, 0.4);
     font-size: 16px;
     font-weight: 600;
-    color: white; /* Білий колір тексту */
-    text-align: left; /* Текст вирівняний зліва */
+    color: white;
+    /* Білий колір тексту */
+    text-align: left;
+    /* Текст вирівняний зліва */
 }
 
 .main input::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Білий колір плейсхолдера з прозорістю */
+
+    color: rgba(255, 255, 255, 0.7);
+    /* Білий колір плейсхолдера з прозорістю */
 }
+
 .main input:focus {
+
     border-color: #ffffff;
     outline: none;
     background-color: #ffffff;
     color: #004164;
-    font-weight: 400;
-    box-shadow: inset 0px 4px 10px rgba(0, 179, 250, 0.2); /* Внутрішня тінь */
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: inset 0px 4px 10px rgba(0, 179, 250, 0.2);
+    /* Внутрішня тінь */
 }
 
 
-.emptyReg{
+.emptyReg {
     color: red;
     font-size: larger;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: left ;
-    width: 70%; 
+    text-align: left;
+    width: 70%;
 }
 
 .signup {
@@ -102,18 +117,19 @@
     display: none;
 }
 
-h4{
+h4 {
     color: #ffffff;
     margin-top: 10px;
     font-weight: 400;
 }
 
-span{
-    font-weight: bold; /* Жирний текст */
+.main span {
+    font-weight: bold;
+    text-decoration: underline;
 
 }
 
-.error{
+.error {
     text-align: left !important;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

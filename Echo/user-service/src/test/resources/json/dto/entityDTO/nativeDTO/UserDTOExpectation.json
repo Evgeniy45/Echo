@@ -1,7 +1,15 @@
 {
   "id": 1,
   "nickname": "nickname",
-  "avatar": null,
+  "avatar": {
+    "id": 1,
+    "fileName": "cat-avatar",
+    "filePath": "app/avatars/nf/987ba42df342ff36013a3afc3987ba42df342ff36013a3afc3.jpg",
+    "fileSize": 13000,
+    "contentType": "image/jpeg",
+    "createdAt": "2000-01-01T01:01:00.000+00:00",
+    "content": null
+  },
   "created": "2000-01-01T01:01:00.000+00:00",
   "changed": "2000-01-01T01:02:00.000+00:00",
   "isDeleted": false,

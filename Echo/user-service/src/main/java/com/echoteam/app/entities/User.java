@@ -25,9 +25,6 @@ public class User {
     @Column(name = "nickname", unique = true, nullable = false)
     private String nickname;
 
-    @Column(name = "avatar", columnDefinition = "BYTEA")
-    private byte[] avatar;
-
     @Column(name = "created", updatable = false)
     private Timestamp created;
 
@@ -36,6 +33,9 @@ public class User {
 
     @Column(name = "is_deleted")
     private Boolean isDeleted = false;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Avatar avatar;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private UserDetail userDetail;

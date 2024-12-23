@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Echo </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/styles/home_page.css">
+	<link rel="stylesheet" href="../static/styles/footer.css">
+	<link rel="stylesheet" href="../static/styles/post_editor.css">
+	<link rel="stylesheet" href="../static/styles/header.css">
+	<link rel="stylesheet" href="../static/styles/login_form.css">
+	<link rel="stylesheet" href="../static/styles/register_form.css">
+	<link rel="icon" href="../static/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body class="body">
+	<header class="header">
+		<form>
+			<div class="login_container hide">
+				<span class="close_btn_login" id="closeForm">&times;</span>
+				<h1 class="loginText">Log In</h1>
+
+				<input class="loginInput" type="text" placeholder="enter username..">
+				<input class="loginInput" type="text" placeholder="enter password..">
+				<p class="loginError hide">input can`t be empty</p>
+				<button class="login_form_btn">Log In</button>
+				<p class="login_noacc">Don't have an account? <h class="sign_up">Sign up</h>
+				</p>
+			</div>
+
+		</form>
+
+
+		<form>
+			<div class="register_container hide">
+				<span class="close_btn_register" id="closeForm">&times;</span>
+				<h1 class="registerText">Sign Up</h1>
+				<input class="registerInput" type="text" placeholder="enter username..">
+				<input class="registerInput" type="text" placeholder="enter email..">
+				<input class="registerInput" type="text" placeholder="enter phone number..">
+				<input class="registerInput" type="text" placeholder="enter password..">
+				<input class="registerInput" type="text" placeholder="repeat password..">
+				<p class="registerError hide">input can`t be empty</p>
+				<button class="register_form_btn">Sign Up</button>
+				<p class="register_noacc">You have an account? <h class="log_in">Log In</h>
+				</p>
+			</div>
+		</form>
+
+
+		<div class="black_background hide"></div>
+
+		<div class="header_container">
+			<a href="../templates/main_pages.html">
+				<img class="header_img" src="../static/images/logo.png" alt="" width="100px">
+			</a>
+
+			<div class="header_search">
+				<img class="header_input_img" src="../static/images/lupa.png" alt="">
+				<input class="header_input" type="text" placeholder="search..">
+			</div>
+			<div class="header_buttons">
+				<img src="../static/images/msg.png" alt="">
+				<a href="../templates/home_page.html">
+					<img width="45px" src="../static/images/profile.png" alt="">
+				</a>
+				<button class="header_login">Log In</button>
+				<button class="header_register">Sign Up</button>
+			</div>
+		</div>
+
+	</header>
+
+	<main class="main">
+		<div class="home_page_container">
+			<div class="user_info_container" id="user_info_container">
+				<div class="user_avatar_nick_name">
+					<img src="../static/images/user_icon_photo.png" alt="User photo">
+					<h1 class="user_nick_name">hmmaybyes</h1>
+				</div>
+				<div class="user_info">
+					<p>Email: <a href="mailto:bogdan228@gmail.com">bogdan228@gmail.com</a></p>
+					<p>Phone number: <a href="tel:+380971773437">+380 97 177 34 37</a></p>
+					<p class="user_description" contenteditable="true">блаблабла</p>
+
+				</div>
+				<button class="user_edit_button">Edit</button>
+			</div>
+			<div class="posts_and_button_container">
+
+				<button class="add_post_button" id="add_post_button">Create post +</button>
+
+				<div class="user_posts_container">
+					<div class="user_post">
+						<div class="user_post_header">
+							<div class="user_post_header_user_avatar_name">
+								<img class="user_post_header_user_icon" src="../static/images/user_icon_photo.png"
+									alt="user icon">
+								<h3 class="user_post_header_user_name">User_Name228</h3>
+							</div>
+							<button class="user_post_header_follow_button">Follow +</button>
+						</div>
+						<div class="user_post_description">
+							<p class="user_post_description_text">
+								A young man with short dark hair and a piercing gaze. He always looks confident,
+								although
+								sometimes he hides his true
+								emotions. He usually wears simple but stylish clothes and likes to spend time outdoors
+								or with
+								friends. His smile can
+								melt any cold atmosphere, and his kindness and willingness to help make him a great
+								friend.
+							</p>
+						</div>
+						<div class="user_post_content">
+							<img class="user_post_content_photo" src="../static/images/bodya.webp" alt="Bodya-with-car">
+						</div>
+						<div class="user_underpost_actions">
+							<button class="user_underbost_action_button">
+								<img class="user_action_button_image" src="../static/images/like_icon.svg"
+									alt="like icon">
+								<span>Like</span>
+							</button>
+							<button class="user_underbost_action_button">
+								<img class="user_action_button_image" src="../static/images/comments_icon.svg"
+									alt="comments icon">
+								<span>Comments</span>
+							</button>
+						</div>
+					</div>
+					<div class="user_post">
+						<div class="user_post_header">
+							<div class="user_post_header_user_avatar_name">
+								<img class="user_post_header_user_icon" src="../static/images/user_icon_photo.png"
+									alt="user icon">
+								<h3 class="user_post_header_user_name">User_Name228</h3>
+							</div>
+							<button class="user_post_header_follow_button">Follow +</button>
+						</div>
+						<div class="user_post_description">
+							<p class="user_post_description_text">
+								A young man with short dark hair and a piercing gaze. He always looks confident,
+								although
+								sometimes he hides his true
+								emotions. He usually wears simple but stylish clothes and likes to spend time outdoors
+								or with
+								friends. His smile can
+								melt any cold atmosphere, and his kindness and willingness to help make him a great
+								friend.
+							</p>
+						</div>
+						<div class="user_post_content">
+							<img class="user_post_content_photo" src="../static/images/bodya.webp" alt="Bodya-with-car">
+						</div>
+						<div class="user_underpost_actions">
+							<button class="user_underbost_action_button">
+								<img class="user_action_button_image" src="../static/images/like_icon.svg"
+									alt="like icon">
+								<span>Like</span>
+							</button>
+							<button class="user_underbost_action_button">
+								<img class="user_action_button_image" src="../static/images/comments_icon.svg"
+									alt="comments icon">
+								<span>Comments</span>
+							</button>
+						</div>
+					</div>
+					<div class="user_post">
+						<div class="user_post_header">
+							<div class="user_post_header_user_avatar_name">
+								<img class="user_post_header_user_icon" src="../static/images/user_icon_photo.png"
+									alt="user icon">
+								<h3 class="user_post_header_user_name">User_Name228</h3>
+							</div>
+							<button class="user_post_header_follow_button">Follow +</button>
+						</div>
+						<div class="user_post_description">
+							<p class="user_post_description_text">
+								A young man with short dark hair and a piercing gaze. He always looks confident,
+								although
+								sometimes he hides his true
+								emotions. He usually wears simple but stylish clothes and likes to spend time outdoors
+								or with
+								friends. His smile can
+								melt any cold atmosphere, and his kindness and willingness to help make him a great
+								friend.
+							</p>
+						</div>
+						<div class="user_post_content">
+							<img class="user_post_content_photo" src="../static/images/bodya.webp" alt="Bodya-with-car">
+						</div>
+						<div class="user_underpost_actions">
+							<button class="user_underbost_action_button">
+								<img class="user_action_button_image" src="../static/images/like_icon.svg"
+									alt="like icon">
+								<span>Like</span>
+							</button>
+							<button class="user_underbost_action_button">
+								<img class="user_action_button_image" src="../static/images/comments_icon.svg"
+									alt="comments icon">
+								<span>Comments</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<footer class="footer">
+		<div class="footer_container">
+			<div class="footer_logo">
+				<a href="/main-pages.html">
+					<img src="../static/images/logo.png" width="130px" alt="Logo">
+				</a>
+			</div>
+			<div class="footer_info">
+				<a href="#" class="footer_link">About us</a>
+				<a href="#" class="footer_link">Profile</a>
+				<a href="#" class="footer_link">Сonditions of use</a>
+			</div>
+			<div class="footer_contacts">
+				<a href="tel:+380971773437" class="footer_link">+ 38(097) 177 34 37</a>
+				<a href="mailto:echocomunity@gmail.com" class="footer_link">echocomunity@gmail.com</a>
+				<div class="footer_contacts_icons">
+					<img src="../static/images/phone_icon.svg" alt="Phone icon">
+					<img src="../static/images/facebook.svg" alt="Facebook icon">
+					<img src="../static/images/instagram.svg" alt="Instagram icon">
+				</div>
+			</div>
+			<div class="footer_privacy_and_buttons">
+				<div class="privacy">
+					<a href="#" class="footer_link">Privacy policy</a>
+					<p class="data_protected">© 2022 Data is protected</p>
+				</div>
+				<div class="download_buttons">
+					<button class="download_button">
+						<img src="../static/images/playstore.png" alt="Playstore">
+						<div class="download_button_descr">
+							<span class="get_it">get it on </span>
+							<span class="google_play_header">Google Play</span>
+						</div>
+					</button>
+					<button class="download_button">
+						<img src="../static/images/apple.png" alt="Apple">
+						<div class="download_button_descr">
+							<span class="download_on">Download on the</span>
+							<span class="app_store_header">App Store</span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="editor_modal" id="editor_modal">
+		<div class="editor_container">
+			<div class="editor_container_head">
+				<h3 class="editor_container_header">Editor</h3>
+				<span class="close_button" id="close_button">&times;</span>
+			</div>
+			<div class="editor_window">
+				<img src="../static/images/editor_img.png" alt="editor image">
+				<h2 class="editor_window_header">To start, select a file</h2>
+				<input class="input_upload_btn" type="file" id="uploadBtn" accept=".png, .jpeg">
+				<label class="label_upload_btn" for="uploadBtn">Download from computer</label>
+			</div>
+			<div class="editor_continue_btn_container">
+				<button class="editor_continue_btn">Сontinue</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="../static/scripts/user_info_pozition.js"></script>
+
+<script src="../static/scripts/post_editor.js"></script>
+<script src="../static/scripts/auth_btn.js"></script>
+<script src="../static/scripts/user_desc.js"></script>
+
+
+
+</html>

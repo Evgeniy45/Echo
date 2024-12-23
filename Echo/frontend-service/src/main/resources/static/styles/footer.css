@@ -1,59 +1,58 @@
 :root {
     --color-primary-dark: #0D637D;
-    --color-primary-light: #ffffff;
+    --color-primary-white: #ffffff;
     --color-secondary-data: #BFBFBF;
     --color-secondary-dark: #000000;
     --color-brand: #41BDFF;
 }
 
 .footer {
-    margin-top: 30px;
     padding: 26px 140px;
     background-color: var(--color-primary-dark);
     font-size: 16px;
     font-weight: normal;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-}
-
-.footer-link {
-    color: var(--color-primary-light);
-    text-decoration: none;
-    margin-bottom: 18px;
-    transition: color 0.3s
-}
-
-.footer-link:hover {
-    color: var(--color-brand);
-}
-
-.footer-container {
+.footer_container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-.footer-info,
-.footer-contacts,
-.footer-privacy-and-buttons {
+.footer_logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer_link {
+    color: var(--color-primary-white);
+    text-decoration: none;
+    margin-bottom: 18px;
+    transition: color 0.3s
+}
+
+.footer_link:hover {
+    color: var(--color-brand);
+}
+
+.footer_info,
+.footer_contacts,
+.footer_privacy_and_buttons {
     display: flex;
     flex-direction: column;
 }
 
-.footer-icons {
+.footer_contacts_icons {
     display: flex;
     gap: 24px;
 }
 
-.footer-icons svg {
-    fill: var(--color-primary-light);
+.footer_contacts_icons svg {
+    fill: var(--color-primary-white);
     transition: fill 0.3s;
 }
 
-.footer-icons svg:hover {
+.footer_contacts_icons svg:hover {
     cursor: pointer;
     fill: var(--color-brand);
 }
@@ -62,21 +61,18 @@
     margin-bottom: 12px;
 }
 
-.privacy p {
+.data_protected {
+    color: var(--color-secondary-data);
     margin: 8px 0 0;
 }
 
-.data-protected {
-    color: var(--color-secondary-data);
-}
-
-.download-buttons {
+.download_buttons {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.download-button {
+.download_button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -88,30 +84,30 @@
     cursor: pointer;
 }
 
-.button-descr {
+.download_button_descr {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
 }
 
-.google-play-header {
+.google_play_header {
     font-weight: 700;
 }
 
-.get-it {
+.get_it {
     font-weight: 400;
     font-size: 10px;
     text-transform: uppercase;
 }
 
-.download-on {
+.download_on {
     font-weight: 500;
     font-size: 10px;
     line-height: 100%;
 }
 
-.App-store-header {
+.app_store_header {
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;

@@ -17,10 +17,10 @@ import java.util.Objects;
 public class UserDTO {
     private Long id;
     private String nickname;
-    private byte[] avatar;
     private Timestamp created;
     private Timestamp changed;
     private Boolean isDeleted;
+    private AvatarDTO avatar;
     private UserDetailDTO userDetail;
     private UserAuthDTO userAuth;
     private List<UserRoleDTO> roles;
@@ -33,6 +33,7 @@ public class UserDTO {
                 .created(Timestamp.valueOf(LocalDateTime.of(2000,1,1,3,1)))
                 .changed(Timestamp.valueOf(LocalDateTime.of(2000,1,1,3,2)))
                 .isDeleted(false)
+                .avatar(AvatarDTO.getValidInstance())
                 .userDetail(UserDetailDTO.getValidInstance())
                 .userAuth(UserAuthDTO.getValidInstance())
                 .roles(UserRoleDTO.getValidInstanceList())

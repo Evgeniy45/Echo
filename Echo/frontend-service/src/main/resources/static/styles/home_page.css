@@ -1,0 +1,319 @@
+:root {
+    --color-primary-dark: #000000;
+    --color-primary-light: #EBE8E8;
+    --color-brand: #41BDFF;
+    --color-secondary-light: #ffffff;
+    --color-secondary-btn-dark: #004E89;
+    --color-decoration: #D9D9D9;
+}
+
+.body {
+    background: url(../images/main_background.png);
+    background-color: var(--color-primary-light);
+    background-repeat: repeat;
+    background-size: auto;
+    margin: 0;
+}
+
+/* Home page container */
+
+.home_page_container {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+/* User information container */
+
+.user_info_container {
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(calc(-50% - 440px), -50%);
+    display: flex;
+    flex-direction: column;
+    max-width: 430px;
+    padding: 26px 30px 18px;
+    background-color: var(--color-secondary-light);
+    border-radius: 20px;
+    box-shadow: 0 0 16px rgba(51, 51, 51, 0.25);
+    transition: box-shadow 0.3s ease;
+    /* Плавність для тіні */
+}
+
+.user_info_container.shadow-top {
+    box-shadow: 0 -40px 30px rgba(0, 238, 255, 0.4);
+    /* Більша тінь зверху, менше розсіювання, мінімальна тінь по боках */
+}
+
+.user_info_container.shadow-bottom {
+    box-shadow: 0 40px 30px rgba(0, 238, 255, 0.4);
+    /* Більша тінь знизу, менше розсіювання, мінімальна тінь по боках */
+}
+
+@media (min-width: 1850px) {
+    .user_info_container {
+        top: 48%;
+    }
+}
+
+/* Posts and button container */
+
+.posts_and_button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 420px;
+}
+
+
+.user_description {
+    max-width: 300px;
+    /* Обмеження ширини */
+    word-wrap: break-word;
+    /* Перенос слів */
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    /* Зберігаємо пробіли */
+    margin-bottom: 10px;
+}
+
+.user_edit_button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.user_edit_button:hover {
+    background-color: #0056b3;
+}
+
+
+/* User avatar and nick name */
+
+.user_avatar_nick_name {
+    text-align: center;
+}
+
+.user_nick_name {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+/* User information */
+
+.user_info p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.user_info p a {
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    transition: color 0.3s;
+}
+
+.user_info p a:hover {
+    color: var(--color-brand);
+}
+
+.user_info .user_description {
+    font-weight: 100;
+}
+
+/* Edit button */
+
+.user_edit_button {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    padding: 16px 134px;
+    background-color: var(--color-brand);
+    color: var(--color-secondary-light);
+    font-size: 26px;
+    border: 1px solid var(--color-brand);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.user_edit_button:hover {
+    color: var(--color-secondary-btn-dark);
+    background-color: transparent;
+    border: 1px solid var(--color-secondary-btn-dark);
+}
+
+.edit_icon {
+    stroke: currentColor;
+    fill: var(--color-secondary-light);
+    vertical-align: middle;
+}
+
+.posts_and_button_container {
+    margin-bottom: 36px;
+}
+
+/* Add post button */
+
+.add_post_button {
+    padding: 16px 150px;
+    background-color: var(--color-brand);
+    color: var(--color-secondary-light);
+    font-weight: 400;
+    font-size: 26px;
+    border: 2px solid var(--color-brand);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.add_post_button:hover {
+    color: var(--color-secondary-btn-dark);
+    background-color: transparent;
+    border: 2px solid var(--color-secondary-btn-dark);
+}
+
+/* User posts styles */
+
+.user_posts_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.user_post {
+    padding: 20px 18px;
+    width: 760px;
+    height: 710px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.user_post:first-child {
+    margin-top: 20px;
+}
+
+
+
+/* User post Header */
+
+.user_post_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.user_post_header_user_avatar_name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.user_post_header_follow_button {
+    padding: 10px 24px;
+    background-color: var(--color-brand);
+    border: 1px solid var(--color-primary-light);
+    border-radius: 24px;
+    color: var(--color-secondary-light);
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.user_post_header_follow_button:hover {
+    cursor: pointer;
+    background-color: var(--color-secondary-light);
+    border: 1px solid var(--color-brand);
+    color: var(--color-brand);
+}
+
+.user_post_header_user_icon {
+    width: 56px;
+    height: 56px;
+}
+
+.user_post_header_user_name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Post description */
+
+.user_post_description {
+    padding: 16px 22px 0;
+    word-wrap: break-word;
+    /* Дозволяє перенос слів */
+    white-space: normal;
+}
+
+.user_post_description_text {
+    margin: 0;
+}
+
+/* Post content */
+.user_post_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.user_post_content_photo {
+    border-radius: 2px;
+    max-width: 760px;
+    max-height: 500px;
+}
+
+/* Underpost actions */
+
+.user_underpost_actions {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 20px;
+    position: relative;
+}
+
+.user_underpost_actions::before {
+    content: "";
+    width: 710px;
+    height: 4px;
+    background-color: var(--color-decoration);
+    position: absolute;
+    top: 0;
+    /* Встановлюємо горизонтальне розташування на 50% */
+    left: 50%;
+    /* Компенсуємо зміщення, щоб центр був по середині */
+    transform: translateX(-50%);
+    border-radius: 15px;
+}
+
+.user_underbost_action_button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.user_action_button_image {
+    margin-right: 6px;
+}

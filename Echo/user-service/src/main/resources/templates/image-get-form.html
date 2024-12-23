@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Переглянути аватар</title>
+		<style>
+				body {
+						font-family: Arial, sans-serif;
+						text-align: center;
+						padding: 20px;
+				}
+				input[type="number"] {
+						padding: 8px;
+						font-size: 16px;
+						margin-top: 10px;
+						width: 100px;
+						text-align: center;
+				}
+				img {
+						max-width: 100%;
+						height: auto;
+						margin-top: 20px;
+						border: 1px solid #ddd;
+						border-radius: 10px;
+						padding: 10px;
+						box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				}
+				button {
+						padding: 10px 20px;
+						font-size: 16px;
+						cursor: pointer;
+						background-color: #007BFF;
+						color: white;
+						border: none;
+						border-radius: 5px;
+						margin-top: 20px;
+				}
+				#message {
+						margin-top: 20px;
+						font-size: 18px;
+						color: red;
+				}
+		</style>
+</head>
+<body>
+<h1>Переглянути аватар</h1>
+<p>Введіть ID користувача:</p>
+<input type="number" id="userIdInput" placeholder="ID користувача" required>
+<br>
+<button id="loadAvatar">Завантажити аватар</button>
+
+<img id="avatarImage" src="" alt="Аватар користувача" style="display: none;">
+<p id="message"></p>
+
+<script>
+		const loadButton = document.getElementById('loadAvatar');
+		const avatarImage = document.getElementById('avatarImage');
+		const message = document.getElementById('message');
+		const userIdInput = document.getElementById('userIdInput');
+
+		loadButton.addEventListener('click', () => {
+				const userId = userIdInput.value.trim();
+
+				if (!userId) {
+						message.textContent = "Будь ласка, введіть ID користувача.";
+						avatarImage.style.display = 'none';
+						return;
+				}
+
+				const url = `http://localhost:8081/api/v1/users/avatar/${userId}`;
+
+				fetch(url)
+								.then((response) => {
+										if (!response.ok) {
+												throw new Error(`Помилка завантаження: ${response.statusText}`);
+										}
+										return response.blob(); // Отримання файлу у вигляді Blob
+								})
+								.then((blob) => {
+										const objectURL = URL.createObjectURL(blob); // Створення URL для відображення зображення
+										avatarImage.src = objectURL;
+										avatarImage.style.display = 'block';
+										message.textContent = ''; // Очистити повідомлення про помилки
+								})
+								.catch((error) => {
+										message.textContent = `Не вдалося завантажити аватар: ${error.message}`;
+										avatarImage.style.display = 'none';
+								});
+		});
+</script>
+</body>
+</html>

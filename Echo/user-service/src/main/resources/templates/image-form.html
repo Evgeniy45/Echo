@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Завантажити зображення</title>
+		<style>
+				body {
+						font-family: Arial, sans-serif;
+						text-align: center;
+						padding: 20px;
+				}
+				input[type="file"], input[type="number"] {
+						margin: 20px 0;
+						padding: 8px;
+						font-size: 16px;
+						width: 200px;
+				}
+				button {
+						padding: 10px 20px;
+						font-size: 16px;
+						cursor: pointer;
+						background-color: #4CAF50;
+						color: white;
+						border: none;
+						border-radius: 5px;
+				}
+				#deleteButton {
+						background-color: #f44336; /* Червоний для кнопки видалення */
+				}
+				img {
+						max-width: 100%;
+						height: auto;
+						margin-top: 20px;
+				}
+				#message {
+						margin-top: 20px;
+						font-size: 18px;
+						color: green;
+				}
+		</style>
+</head>
+<body>
+<h2>Сторінка для перегляду аватарів</h2>
+<a th:href="@{/api/v1/users/avatar/get-image}">Here</a>
+
+<h1>Завантажте аватар для користувача</h1>
+
+<!-- Форма для завантаження аватару -->
+<form id="avatarForm" method="post" enctype="multipart/form-data">
+		<label for="userId">Введіть ID користувача:</label>
+		<input type="number" name="userId" id="userId" placeholder="ID користувача" required>
+		<br>
+		<input type="file" name="avatar" id="imageUpload" accept="image/*" required>
+		<br>
+		<img id="preview" src="" alt="Попередній перегляд" style="display:none;">
+		<br>
+		<button type="submit">Відправити</button>
+</form>
+
+<!-- Форма для видалення аватару -->
+<h2>Видалити аватар користувача</h2>
+<form id="deleteAvatarForm">
+		<label for="deleteUserId">Введіть ID користувача:</label>
+		<input type="number" name="deleteUserId" id="deleteUserId" placeholder="ID користувача" required>
+		<br>
+		<button id="deleteButton" type="button">Видалити</button>
+</form>
+
+<!-- Місце для відображення повідомлень -->
+<div id="message"></div>
+
+<script>
+		// Функція для попереднього перегляду картинки
+		const fileInput = document.getElementById('imageUpload');
+		const previewImage = document.getElementById('preview');
+
+		fileInput.addEventListener('change', (event) => {
+				const file = event.target.files[0];
+				if (file) {
+						const reader = new FileReader();
+						reader.onload = () => {
+								previewImage.src = reader.result;
+								previewImage.style.display = 'block';
+						};
+						reader.readAsDataURL(file);
+				} else {
+						previewImage.style.display = 'none';
+						previewImage.src = '';
+				}
+		});
+
+		// Обробка форми для відправки через AJAX
+		document.getElementById('avatarForm').addEventListener('submit', function(event) {
+				event.preventDefault(); // Перешкоджаємо стандартному відправленню форми
+
+				// Створення нового FormData для відправки файлу і даних форми
+				const formData = new FormData(this);
+
+				// Виконання запиту на сервер
+				fetch('/api/v1/users/avatar', {
+						method: 'POST',
+						body: formData
+				})
+								.then(response => {
+										if (response.ok) {
+												// Отримуємо Location з headers
+												const location = response.headers.get('Location');
+												if (location) {
+														document.getElementById('message').innerHTML = `Аватар успішно завантажено! Перейдіть за посиланням: <a href="${location}" target="_blank">${location}</a>`;
+												}
+										} else {
+												document.getElementById('message').innerHTML = 'Сталася помилка при завантаженні файлу!';
+										}
+								})
+								.catch(error => {
+										document.getElementById('message').innerHTML = 'Сталася помилка під час відправки запиту!';
+								});
+		});
+
+		// Обробка форми для видалення через AJAX
+		document.getElementById('deleteButton').addEventListener('click', function() {
+				const userId = document.getElementById('deleteUserId').value;
+
+				if (!userId) {
+						document.getElementById('message').innerHTML = 'Введіть ID користувача для видалення!';
+						return;
+				}
+
+				// Виконання DELETE-запиту на сервер
+				fetch(`/api/v1/users/avatar/${userId}`, {
+						method: 'DELETE'
+				})
+								.then(response => {
+										if (response.ok) {
+												document.getElementById('message').innerHTML = `Аватар для користувача з ID ${userId} успішно видалено!`;
+										} else {
+												document.getElementById('message').innerHTML = 'Сталася помилка при видаленні аватару!';
+										}
+								})
+								.catch(error => {
+										document.getElementById('message').innerHTML = 'Сталася помилка під час запиту на видалення!';
+								});
+		});
+</script>
+</body>
+</html>

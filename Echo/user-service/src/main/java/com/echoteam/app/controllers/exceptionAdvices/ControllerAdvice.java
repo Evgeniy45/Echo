@@ -5,6 +5,7 @@ import com.echoteam.app.entities.UserAuth;
 import com.echoteam.app.entities.UserDetail;
 import com.echoteam.app.entities.UserRole;
 import com.echoteam.app.exceptions.ParameterIsNotValidException;
+import com.echoteam.app.exceptions.SomethingWrongException;
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.JoinColumn;
@@ -20,6 +21,12 @@ import java.lang.reflect.Field;
 
 @org.springframework.web.bind.annotation.ControllerAdvice
 public class ControllerAdvice {
+
+    @ExceptionHandler(value = SomethingWrongException.class)
+    public ResponseEntity<ErrorResponse> handelSomethingWrongExtension(SomethingWrongException ex) {
+        var errorResponse = ErrorResponse.builder(ex, HttpStatus.UNPROCESSABLE_ENTITY, ex.getMessage()).build();
+        return ResponseEntity.badRequest().body(errorResponse);
+    }
 
     @ExceptionHandler(value = ParameterIsNotValidException.class)
     public ResponseEntity<ErrorResponse> handleParameterIsNotValidException(ParameterIsNotValidException ex) {

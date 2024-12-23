@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles/header.css">
+    <link rel="stylesheet" href="../static/styles/login_form.css">
+    <link rel="stylesheet" href="../static/styles/register_form.css">
+</head>
+<body>
+
+    <form> 
+        <div class="login_container hide">
+            <span class="close_btn_login" id="closeForm">&times;</span>
+            <h1 class="loginText">Log In</h1>
+       
+            <input class="loginInput" type="text" placeholder="enter username..">
+            <input class="loginInput" type="text" placeholder="enter password..">
+            <p class="loginError hide">input can`t be empty</p>
+            <button class="login_form_btn">Log In</button>
+            <p class="login_noacc">Don't have an account? <h class="sign_up">Sign up</h> </p>
+        </div>
+
+    </form>
+
+
+    <form>
+        <div class="register_container hide">
+            <span class="close_btn_register" id="closeForm">&times;</span>
+            <h1 class="registerText">Sign Up</h1>
+            <input class="registerInput" type="text" placeholder="enter username..">
+            <input class="registerInput"type="text" placeholder="enter email..">
+            <input class="registerInput"type="text" placeholder="enter phone number..">
+            <input class="registerInput"type="text" placeholder="enter password..">
+            <input class="registerInput"type="text" placeholder="repeat password..">
+            <p class="registerError hide">input can`t be empty</p>
+            <button class="register_form_btn">Sign Up</button>
+            <p class="register_noacc">You have an account? <h class="log_in">Log In</h> </p>
+        </div>
+    </form>
+
+
+    <form>
+        <div class="black_background hide"></div>
+
+        <div class="header_container">
+            <img class="header_img" src="../static/images/logo.png" alt="" width="100px" >
+            <div class="header_search">
+                <img class="header_input_img" src="../static/images/lupa.png" alt="">
+                <input class="header_input" type="text" placeholder="search.." >
+            </div>
+            <div class="header_buttons"> 
+                <img  src="../static/images/msg.png" alt="" >
+                <img width="45px" src="../static/images/profile.png" alt="">
+                <button class="header_login">Log In</button>
+                <button class="header_register">Sign Up</button>
+            </div>
+        </div>
+
+        
+
+    </form>
+
+    
+
+  
+    
+</body>
+<script src="../static/scripts/auth_btn.js"></script>
+</html>

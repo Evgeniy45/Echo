@@ -1,150 +1,122 @@
-.reg-reg {
-    width: 480px;
-    height: 720px;
-    padding: 30px 20px;
-    border-radius: 48px;
-    background-image: url(../images/back.png);
-    background-size: 630px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    /* Закріплює форму на екрані */
-    margin-top: 480px;
+.register_container {
+    position: fixed; /* Fixed positioning for the container */
+    top: 50%;
     left: 50%;
-    /* Вирівнює форму по горизонталі */
     transform: translate(-50%, -50%);
-    /* Центрує форму */
-    z-index: 505;
-    /* Встановлює великий z-index для перекриття інших елементів */
-}
-
-
-
-.close-btn:hover {
-    color: #ff0000;
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 48px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.close-btn:hover {
-    color: #ff6b6b; /* Зміна кольору при наведенні */
-}
-
-
-.head {
-
-    text-align: center;
-}
-
-.head h2 {
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 70px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 48px;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-}
-
-.main-reg {
-
-    margin-top: 120px;
+    width: auto;
+    height: auto;
+    padding: 20px 80px;
+    background-image: url(../images/authbackground.png);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Вирівнює інпути по горизонталі */
-}
-
-.main input {
-
-    width: 70%;
-    height: 50px;
-    margin: 7px;
-    padding: 5px 15px;
-    border: 1px solid #ffffff;
-    border-radius: 32px;
-    background-color: rgba(255, 255, 255, 0.4);
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    /* Білий колір тексту */
-    text-align: left;
-    /* Текст вирівняний зліва */
-}
-
-.main input::placeholder {
-
-    color: rgba(255, 255, 255, 0.7);
-    /* Білий колір плейсхолдера з прозорістю */
-}
-
-.main input:focus {
-
-    border-color: #ffffff;
-    outline: none;
-    background-color: #ffffff;
-    color: #004164;
-    font-size: 18px;
-    font-weight: 600;
-    box-shadow: inset 0px 4px 10px rgba(0, 179, 250, 0.2);
-    /* Внутрішня тінь */
-}
-
-
-.emptyReg {
-    color: red;
-    font-size: larger;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: left;
-    width: 70%;
-}
-
-.signup {
-    margin-top: 90px;
-    width: 50%;
-    height: 55px;
-    background-color: #ffffff;
-    color: #41BDFF;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    display: flex;
     justify-content: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 12;
+}
+
+.register_container span {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.register_container span:hover {
+    background-color: #f0f0f0;
+    color: #004E89;
+}
+
+.registerText {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.register_container input {
+    width: 280px;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-size: 20px;
+    color: white;
+    outline: none;
+}
+
+.register_container input:focus {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.register_container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.register_form_btn {
+    margin-top: 50px;
+    padding: 15px 80px;
+    border-radius: 50px;
+    border: none;
+    color: #41BDFF;
     font-size: 18px;
-    font-weight: 600;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+.register_form_btn:hover {
+    background-color: #eaf6ff;
+}
 
-.signup:hover {
-    background-color: #e5f1f8;
+.register_noacc {
+    color: white;
+    text-align: center;
+}
+
+.register_noacc h {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register_background {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 1100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    overflow: hidden;
 }
 
 .hide {
     display: none;
 }
 
-h4 {
-    color: #ffffff;
-    margin-top: 10px;
-    font-weight: 400;
+.registerError {
+    position: absolute;
+    left: 100px;
+    bottom: 140px;
+    font-size: 14px;
+    color: red;
 }
 
-.main span {
-    font-weight: bold;
-    text-decoration: underline;
-
-}
-
-.error {
-    text-align: left !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body.no-scroll {
+    overflow: hidden;
 }

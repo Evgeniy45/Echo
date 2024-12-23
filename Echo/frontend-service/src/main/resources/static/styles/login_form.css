@@ -1,155 +1,133 @@
-.reg {
-    width: 480px;
-    height: 540px;
-    padding: 30px 20px;
-    border-radius: 48px;
-    background-image: url(../images/back.png);
-    background-size: 530px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+body.no-scroll {
+    overflow: hidden; /* Забороняє прокручування */
+}
+
+.login_container {
     position: fixed;
-    /* Закріплює форму на екрані */
-    margin-top: 450px;
-    left: 50%;
-    /* Вирівнює форму по горизонталі */
-    transform: translate(-50%, -50%);
-    /* Центрує форму */
-    z-index: 505;
-    /* Встановлює великий z-index для перекриття інших елементів */
-
-}
-
-.emptyLogin {
-    color: red;
-    font-size: larger;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: left;
-    width: 70%;
-}
-
-.close-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 48px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
-    transition: color 0.4s, background-color 0.4s, transform 0.4s;
-}
-
-.close-btn:hover {
-    background-color: white;
-    border-radius: 50%;
-    color: #004164 !important;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px white;
-    /* Зміна кольору при наведенні */
-}
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: auto; 
+    padding: 60px 70px; 
+    background-image: url(../images/authbackground.png);
+    background-size: cover; /* Розтягнути зображення на весь екран */
 
 
-
-.head {
-
-    text-align: center;
-}
-
-.head h2 {
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 70px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 48px;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-}
-
-.main {
-    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Вирівнює інпути по горизонталі */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
+    z-index: 12;
 }
 
-.main input {
-    width: 70%;
-    height: 50px;
-    margin: 7px;
-    padding: 20px;
-    border: 1px solid #ffffff;
-    border-radius: 32px;
-    background-color: rgba(255, 255, 255, 0.4);
-    font-size: 16px;
-    font-weight: 600;
+
+.login_container span {
     color: white;
-    /* Білий колір тексту */
-    text-align: left;
-    /* Текст вирівняний зліва */
-}
-
-.main input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-    /* Білий колір плейсхолдера з прозорістю */
-}
-
-.main input:focus {
-    border-color: #ffffff;
-    outline: none;
-    background-color: #ffffff;
-    color: #004164;
-    font-weight: 400;
-    box-shadow: inset 0px 4px 10px rgba(0, 179, 250, 0.2);
-    /* Внутрішня тінь */
-}
-
-.signup {
-    margin-top: 100px;
-    width: 50%;
-    height: 55px;
-    background-color: #ffffff;
-    color: #41BDFF;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 48px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+    border-radius: 50%; 
+}
+
+.login_container span:hover {
+    background-color: #f0f0f0;
+    color: #004E89; 
+}
+
+.loginText {
+    margin-bottom: 50px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.login_container input {
+    width: 280px;
+    margin: 10px;
+    padding: 20px 30px; 
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-size: 16px;
+    color: white;
+    outline: none;
+}
+
+.login_container input:focus {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: black;
+}
+
+.login_container input::placeholder {
+    text-align: left; 
+    color: rgba(255, 255, 255, 0.7); 
+    font-size: 16px;
 }
 
 
-.signup:hover {
-    background-color: #e5f1f8;
+.login_form_btn{
+    margin-top: 100px;
+    padding: 20px 100px;
+    border-radius: 20px;
+    border: none;
+    color: #41BDFF;
+    font-size: large;
+    cursor: pointer;
 }
 
-.hide {
+.login_form_btn:hover{
+    background-color: #eaf6ff;
+    color: #41BDFF;
+}
+
+.login_noacc{
+    color: white;
+}
+
+.login_noacc h{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.black_background{
+    position: absolute;
+    background-color: rgb(29, 28, 28, 0.75);
+    height: 1200%; /* Займає висоту екрану */
+    width: 100%; /* Займає всю ширину екрану */
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden; /* Відключає скрол */
+}
+
+
+.hide{
     display: none;
 }
 
-h4 {
-    color: #ffffff;
-    margin-top: 10px;
-    font-weight: 400;
-
+.login_container input {
+    position: relative; /* Встановлюємо контекст позиціонування */
 }
 
-h4 span {
-    cursor: pointer;
-}
-
-.main span {
-    font-weight: bold;
-    text-decoration: underline;
-
-}
-
-.error {
-    text-align: left !important;
-    font-weight: 600;
+.loginError {
+    position: absolute;
+    left: 100px; /* Вирівнюємо по лівій стороні інпуту */
+    bottom: 240px; 
+    font-size: 14px;
+    color: red;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

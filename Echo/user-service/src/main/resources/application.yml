@@ -2,6 +2,10 @@ server:
   port: 8081
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
   datasource:
     url: jdbc:postgresql://localhost:5432/echo_user
     username: bodya
@@ -17,9 +21,12 @@ spring:
 
 application:
   name: Echo
+  path:
+    avatars: app/avatars
   endpoint:
     root: /api/v1
     user: ${application.endpoint.root}/users
     auth: ${application.endpoint.user}/auths
     detail: ${application.endpoint.user}/details
     role: ${application.endpoint.user}/roles
+    avatar: ${application.endpoint.user}/avatar

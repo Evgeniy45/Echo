@@ -76,7 +76,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<Void> createUser(@Valid @RequestBody CreatedUser user,
-                                        UriComponentsBuilder uriBuilder) {
+                                            UriComponentsBuilder uriBuilder) {
         var createdUser = userService.createUser(INSTANCE.toDTOFromCreatedUser(user));
 
         URI location = uriBuilder

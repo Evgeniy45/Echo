@@ -26,6 +26,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		
 		<!-- VALIDATION -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

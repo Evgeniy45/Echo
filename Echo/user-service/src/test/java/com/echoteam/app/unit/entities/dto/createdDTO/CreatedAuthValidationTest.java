@@ -128,7 +128,7 @@ public class CreatedAuthValidationTest {
 
         // then
         assertThat(violations).hasSize(1);
-        assertThat(violations.iterator().next().getMessage()).isEqualTo("Length should be between 8-32 inclusive");
+        assertThat(violations.iterator().next().getMessage()).isEqualTo("Length should be between 8-255 inclusive");
     }
 
     @Test
@@ -142,7 +142,7 @@ public class CreatedAuthValidationTest {
 
         // then
         assertThat(violations).hasSize(1);
-        assertThat(violations.iterator().next().getMessage()).isEqualTo("Length should be between 8-32 inclusive");
+        assertThat(violations.iterator().next().getMessage()).isEqualTo("Length should be between 8-255 inclusive");
     }
 
     @Test
